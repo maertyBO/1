@@ -1,0 +1,19 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class AlphabetSorting {
+    public static void main(String[] args) {
+        char[] alphabet = {'c', 'a', 'b', 'e', 'd', 'g', 'f'};
+        Arrays.sort(alphabet);
+        Character[] charObjects = new Character[alphabet.length];
+        for (int i = 0; i < alphabet.length; i++) {
+            charObjects[i] = alphabet[i];
+        }
+        Arrays.sort(charObjects, Comparator.reverseOrder());
+        for (int i = 0; i < alphabet.length; i++) {
+            alphabet[i] = charObjects[i];
+        }
+        System.out.println(Arrays.toString(alphabet));
+        // Output: [g, f, e, d, c, b, a]
+    }
+}
